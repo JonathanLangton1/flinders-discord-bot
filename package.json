@@ -1,0 +1,16 @@
+{
+  "name": "flinders-discord-bot",
+  "version": "1.0.0",
+  "description": "Discord bot for discord server 'Flinders System' which reacts 💧💀 to images posted in the 'drip or drown' text channel",
+  "main": "bot.js",
+  "scripts": {
+    "test": "node ."
+  },
+  "author": "Jonnie",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "discord.js": "^14.3.0",
+    "dotenv": "^16.0.2"
+  }
+}
