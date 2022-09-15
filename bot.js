@@ -18,9 +18,9 @@ client.on('ready', () => {
 
 
 
-// If image posted in drip-or-drown channel, react with 💧💀
+// If image posted in #drip-or-drown channel, react with 💧💀
 client.on('messageCreate', message => {
-    if (message.channel.name === 'drip-or-drown' && message.attachments.size) { // If message has attachments
+    if (message.channel.name === 'drip-or-drown' && message.attachments.size > 0) {
         message.attachments.forEach(attachment => {
             if (attachIsImage(attachment)) {
                 message.react('💧');
@@ -40,19 +40,5 @@ function attachIsImage(msgAttach) {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//make sure this line is the last line
-client.login(process.env.CLIENT_TOKEN); //login bot using token
+// Login bot using token
+client.login(process.env.CLIENT_TOKEN);
