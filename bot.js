@@ -18,9 +18,9 @@ client.on('ready', () => {
 
 
 
-// If image posted in #drip-or-drown channel, react with 💧💀
+// If image posted in #💧drip-or-drown💀 channel, react with 💧💀
 client.on('messageCreate', message => {
-    if (message.channel.name === 'drip-or-drown' && message.attachments.size > 0) {
+    if (message.channel.name === '💧drip-or-drown💀' && message.attachments.size > 0) {
         message.attachments.forEach(attachment => {
             if (attachIsImage(attachment)) {
                 message.react('💧');
