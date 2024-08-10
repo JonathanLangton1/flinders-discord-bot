@@ -40,5 +40,4 @@ function attachIsImage(msgAttach) {
 
 
 // Login bot using token
-console.log(process.env.CLIENT_TOKEN)
 client.login(process.env.CLIENT_TOKEN)
