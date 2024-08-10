@@ -1,5 +1,4 @@
-require('dotenv').config(); //initialize dotenv
-const { Client, GatewayIntentBits } = require('discord.js'); //import discord.js
+const { Client, GatewayIntentBits } = require('discord.js') //import discord.js
 
 // Create new client
 const client = new Client({
@@ -8,11 +7,11 @@ const client = new Client({
         GatewayIntentBits.GuildMessages,
         GatewayIntentBits.MessageContent,
     ]
-});
+})
 
 client.on('ready', () => {
-  console.log(`Logged in as ${client.user.tag}!`);
-});
+    console.log(`Logged in as ${client.user.tag}!`)
+})
 
 
 
@@ -23,12 +22,12 @@ client.on('messageCreate', message => {
     if (message.channel.name === '💧drip-or-drown💀' && message.attachments.size > 0) {
         message.attachments.forEach(attachment => {
             if (attachIsImage(attachment)) {
-                message.react('💧');
-                message.react('💀');
+                message.react('💧')
+                message.react('💀')
             }
         })
     }
-});
+})
 
 
 // Function which returns true if attachment is an image
@@ -41,4 +40,5 @@ function attachIsImage(msgAttach) {
 
 
 // Login bot using token
-client.login(process.env.CLIENT_TOKEN);
+console.log(process.env.CLIENT_TOKEN)
+client.login(process.env.CLIENT_TOKEN)
