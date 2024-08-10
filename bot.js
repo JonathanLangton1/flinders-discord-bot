@@ -1,4 +1,3 @@
-require('dotenv').config(); //initialize dotenv
 const { Client, GatewayIntentBits } = require('discord.js'); //import discord.js
 
 // Create new client
